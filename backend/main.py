@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
 from backend.cards import card_management as cm
+from backend.users import user_management as um
 
 client = MongoClient("mongodb://localhost:27017")
 db = client.cardGame  
@@ -9,15 +10,14 @@ db = client.cardGame
 
 test_database = db.get_collection("hola")
 
-app = FastAPI() #Sin hacer -belz
+app = FastAPI()
 
-
+# Para probar usar `curl -X POST "http://127.0.0.1:8000/?name=belz&password=12345&mail=belz@example.com"`, cambiando los parametros
 @app.post("/")
-async def read_root():
-    result = cm.card_creation()
-    print("CREADO")
-    # Probar la llamada a la api ejecutando: `curl -X POST http://127.0.0.1:8000` en la terminal
+async def user_add(name:str, password:str, mail:str):
+    result = um.user_creation(name, password, mail)
+    print("USUARIO CREADO----_AAAAA_")
     return result
 
-# cm.card_creation() #Una vez exista la API, cambiar esto por su respectiva llamada de API. Por ahora solo llama al metodo de card_management
 
+# Para crear cartas usar el cm.cardmanagement()
