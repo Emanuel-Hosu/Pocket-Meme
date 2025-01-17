@@ -1,17 +1,12 @@
-import React from 'react';
-import { UserInput } from './components/UserInput';
-import { LoginButton } from './components/LoginButton';
-import { PasswordInput } from './components/PasswordInput';
-
+import React from "react";
+import FooterIniciarSesion from "./components/FooterIniciarSesion";
+import FooterRegistro from "./components/FooterRegistro";
 
 function App() {
   return (
-    <div className="flex flex-col justify-center items-center gap-10 bg-gray-100 min-h-screen">
-
+    <div className="min-h-screen bg-gray-100">
+      <FooterIniciarSesion></FooterIniciarSesion>
     </div>
-
-
-
   );
 }
 
