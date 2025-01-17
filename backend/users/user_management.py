@@ -49,7 +49,9 @@ def user_creation(name , password, mail):
         "_id": user_id,
         "name": name,
         "password": hash_password,
-        "mail": mail
+        "mail": mail,
+        "cards": [],
+        "starred_cards": []
     } 
     
     if(not user_database.find_one({"mail": mail})):
