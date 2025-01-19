@@ -1,12 +1,14 @@
 import React from "react";
-import FooterIniciarSesion from "./components/FooterIniciarSesion";
-import FooterRegistro from "./components/FooterRegistro";
+import { Registrarse } from "./components/Registrarse";
+import { IniciarSesion } from "./components/IniciarSesion";
+
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <FooterIniciarSesion></FooterIniciarSesion>
-    </div>
+    <>
+    <IniciarSesion />
+    <Registrarse />  
+    </>
   );
 }
 
