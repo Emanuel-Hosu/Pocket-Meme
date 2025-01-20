@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const PlayerLevelBar = () => {
-    const [progress, setProgress] = useState(70);
+    const [progress, setProgress] = useState(60);
     //para subir porcentage updateProgress(progress + 10)
     //para bajar porcentage updateProgress(progress - 10)
     const updateProgress = (newProgress) => {
@@ -11,24 +11,20 @@ const PlayerLevelBar = () => {
     };
 
     return (
-        <div className="flex justify-center items-center">
-            <div className="flex flex-col items-center bg-red-400 shadow-2xl rounded-lg">
-                <button className="py-2">
+        <div className="flex justify-center items-center w-full">
+            <div className="flex flex-col items-center bg-red-400 shadow-2xl rounded-lg min-w-96 max-w-96">
+                <button className="py-4">
                     <img className="shadow-lg rounded-full size-20" src="/public/gatt.jpg" alt="" />
                 </button>
-                <div className="pb-2 w-80">
-                    <div className="relative bg-gray-300 rounded-full h-6">
+
+
+                <div className="bg-green-700 py-2 rounded-lg w-full">
+                    <div className="bg-purple-600 rounded-full h-6">
                         <div
-                            className="top-0 left-0 absolute bg-green-500 rounded-full h-full transition-all duration-300"
+                            className="top-0 left-0 bg-green-400 rounded-full h-full transition-all duration-300"
                             style={{ width: `${progress}%` }}
                         ></div>
                     </div>
-                    <div>
-                        <p>
-                            Nivel 7
-                        </p>
-                    </div>
-
                 </div>
             </div>
         </div>
