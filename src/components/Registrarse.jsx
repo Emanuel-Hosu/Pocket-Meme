@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {UserInput} from './UserInput';
 import {PasswordInput} from './PasswordInput';
 import { RegistrarseInput } from './RegistrarseInput';
@@ -25,6 +25,7 @@ export const Registrarse = () => {
         <a className="text-blue-600 hover:underline ml-1" href="./components/IniciarSesion">
           inicia sesión.{" "}
         </a>
+        <br />
         Y vuelve a tu aventura
       </a>
       </div>
