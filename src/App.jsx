@@ -6,7 +6,7 @@ import { IniciarSesion } from "./components/IniciarSesion";
 function App() {
   return (
     <>
-    <IniciarSesion />
+    <Registrarse />
     </>
   );
 }
