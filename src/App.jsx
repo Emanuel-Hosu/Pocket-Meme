@@ -4,11 +4,13 @@ import { IniciarSesion } from "./components/IniciarSesion";
 import {Logo} from './components/Logo';
 import { BotonFormulario } from "./components/BotonFormulario";
 import { Formulario } from "./components/Formulario";
+import { Tienda } from "./components/Tienda";
+
 
 function App() {
   return (
     <>
-    <Formulario />
+    <Tienda dinero={10} />
     </>
   );
 }
