@@ -51,10 +51,42 @@ def user_creation(name , password, mail):
         "password": hash_password,
         "mail": mail,
         "cards": [],
-        "starred_cards": []
+        "starred_cards": [],
+        "exp": 0,
+        "MaxExp": 100,
+        "level": 1,
+        "pfp" : "",
+        "money" : 0
     } 
     
     if(not user_database.find_one({"mail": mail})):
         user_database.insert_one(user)
     else:
         return "Mail already used"
+    
+
+def addExp (expNum , user_id):
+    
+    user = user_database.find_one({"_id": user_id})
+    exp = user["exp"] + expNum
+    
+    if(exp>= user["MaxExp"]):
+        exp = exp - user["MaxExp"]
+        level = user["level"] + 1
+        MaxExp = user["MaxExp"] + (user["MaxExp"] * 0.3)
+        user_database.update_one({"_id": user_id}, {"$set": {"level": level} , "$set": {"MaxExp": MaxExp} , "$set": {"exp": exp}})
+        
+        return True
+    
+    user_database.update_one({"_id": user_id}, {"$set": {"exp": exp}})
+    
+    return False
+
+    
+def addMoney (moneyNum , user_id):
+    user = user_database.find_one({"_id": user_id})
+    money = user["money"] + moneyNum
+    user_database.update_one({"_id": user_id}, {"$set": {"money": money}})
+
+def change_pfp (pfp , user_id):
+    user_database.update_one({"_id": user_id}, {"$set": {"pfp": pfp}})

@@ -1,0 +1,330 @@
+[33mcommit 924f95e0ee836d9c8c43dd9859b0ca60667a3d44[m[33m ([m[1;36mHEAD -> [m[1;32mmayraC30-C31[m[33m, [m[1;31morigin/mayraC30-C31[m[33m)[m
+Merge: bdbaea7 f5cad62
+Author: Arturo Álvarez Gómez <144948359+ArthurAlvvarez@users.noreply.github.com>
+Date:   Tue Jan 21 19:50:25 2025 +0100
+
+    Merge pull request #13 from Emanuel-Hosu/arturo-c10
+    
+    Arturo c10
+
+[33mcommit f5cad626152d86b4d80193d4fd2e92e4a76cc0a3[m
+Merge: ef9c2a1 bdbaea7
+Author: Arturo Álvarez Gómez <144948359+ArthurAlvvarez@users.noreply.github.com>
+Date:   Tue Jan 21 19:50:12 2025 +0100
+
+    Merge branch 'testing' into arturo-c10
+
+[33mcommit ef9c2a1c4ff62cef9807b4dc5c1a412f38d4f37c[m
+Author: ArthurAlvvarez <arturo.alvarez.gomez@colegiolitterator.com>
+Date:   Tue Jan 21 19:47:13 2025 +0100
+
+    actualizado pagina registrase y botones
+
+[33mcommit cb5208c3367a9395413b2f210e1ec239a6c91e01[m[33m ([m[1;31morigin/arturo-c10[m[33m)[m
+Author: ArthurAlvvarez <arturo.alvarez.gomez@colegiolitterator.com>
+Date:   Tue Jan 21 19:45:06 2025 +0100
+
+    actualizado pagina registrase y botones
+
+[33mcommit bdbaea71b92ee59380e2460f505d16639eda26e2[m
+Author: ArthurAlvvarez <arturo.alvarez.gomez@colegiolitterator.com>
+Date:   Mon Jan 20 21:17:21 2025 +0100
+
+    Registrarse
+
+[33mcommit 77b367c61876e0e36cdadd28ebf3201e20afc550[m
+Merge: 315b86a 6d1211d
+Author: ArthurAlvvarez <arturo.alvarez.gomez@colegiolitterator.com>
+Date:   Mon Jan 20 20:17:29 2025 +0100
+
+    Merge branch 'testing' of https://github.com/Emanuel-Hosu/Pocket-Meme into testing
+
+[33mcommit 315b86a70f57dd0b2dabc3fca01b48fdc54a297f[m
+Author: ArthurAlvvarez <arturo.alvarez.gomez@colegiolitterator.com>
+Date:   Mon Jan 20 20:17:26 2025 +0100
+
+    Botones multiusos
+
+[33mcommit 6d1211dcc11cde9db50a007faefb235dc64da25a[m
+Merge: 281aa86 2b94692
+Author: david <davidespeton@gmail.com>
+Date:   Mon Jan 20 16:45:04 2025 +0100
+
+    Merge branch 'testing' of https://github.com/Emanuel-Hosu/Pocket-Meme into testing
+
+[33mcommit 281aa86633d8e1dc2a040df8d9c89bfcf436be49[m
+Merge: a3bcd8c 7f66cd3
+Author: david <davidespeton@gmail.com>
+Date:   Mon Jan 20 16:42:21 2025 +0100
+
+    Merge branch 'david-16' into testing
+
+[33mcommit 2b9469299f9981cd9376c3c7802800fb06bbc76d[m
+Merge: a3bcd8c 65478c2
+Author: Arturo Álvarez Gómez <144948359+ArthurAlvvarez@users.noreply.github.com>
+Date:   Mon Jan 20 15:29:59 2025 +0100
+
+    Merge pull request #11 from Emanuel-Hosu/arturo-c10
+    
+    Arturo c10
+
+[33mcommit 65478c21458af323d0035f439fc8d2e6ee0aa566[m
+Author: ArthurAlvvarez <arturo.alvarez.gomez@colegiolitterator.com>
+Date:   Mon Jan 20 15:28:23 2025 +0100
+
+    listo
+
+[33mcommit 5b8bd5a9ca3cb8a0792710cd9067f054816dcfac[m
+Author: ArthurAlvvarez <arturo.alvarez.gomez@colegiolitterator.com>
+Date:   Mon Jan 20 15:12:51 2025 +0100
+
+    cambio de color
+
+[33mcommit 7f66cd3db60b9c33ee6e83bd7f801bcf495bf91e[m
+Author: david <davidespeton@gmail.com>
+Date:   Mon Jan 20 10:12:41 2025 +0100
+
+    Eliminado footer de prueba
+
+[33mcommit 1e0994dfd67354abc90adca5fddad27130bdf8ed[m
+Author: ArthurAlvvarez <arturo.alvarez.gomez@colegiolitterator.com>
+Date:   Sun Jan 19 22:54:33 2025 +0100
+
+    faltan por defininirlos colores
+
+[33mcommit a3bcd8c9138fc02c07ff91c87db5579b10773b4c[m
+Merge: d1513e9 5b330bb
+Author: ZMiK0_ <162772050+ZMiK0@users.noreply.github.com>
+Date:   Fri Jan 17 19:56:52 2025 +0100
+
+    Merge pull request #10 from Emanuel-Hosu/belz-C20
+    
+    apertura de sobres
+
+[33mcommit 5b330bb90a0101a2f0bc5f15f606e8527e8ea6d2[m
+Author: ZMiK0 <kbelz21z@gmail.com>
+Date:   Fri Jan 17 19:56:20 2025 +0100
+
+    apertura de sobres
+
+[33mcommit 9ce9d115d26a164f72f41b0f4c14c8c5356b3f71[m
+Author: david <davidespeton@gmail.com>
+Date:   Fri Jan 17 18:35:21 2025 +0100
+
+    footer general finalizado y correción de codigo
+
+[33mcommit d1513e96727a626b26bc975b8d7fc857ef14f8b2[m
+Merge: 335fd61 86d9b3b
+Author: Caye110905 <145046977+Caye110905@users.noreply.github.com>
+Date:   Fri Jan 17 17:40:28 2025 +0100
+
+    Merge pull request #9 from Emanuel-Hosu/Cayetano-C12
+    
+    Input de registrarse hecho
+
+[33mcommit 86d9b3bfd09405a5f1ef79681c6c3dddae91d68d[m
+Author: Caye110905 <145046977+Caye110905@users.noreply.github.com>
+Date:   Fri Jan 17 17:39:28 2025 +0100
+
+    Input de registrarse hecho
+
+[33mcommit 335fd6135cfabe929e0186a5da49e1488b8b3083[m
+Merge: 063c3b2 6265df6
+Author: Caye110905 <145046977+Caye110905@users.noreply.github.com>
+Date:   Fri Jan 17 17:38:12 2025 +0100
+
+    Merge pull request #8 from Emanuel-Hosu/Cayetano-C11
+    
+    Input de correo hecho
+
+[33mcommit 6265df6c11ab2acfbf7ccbb3ca4802399a5ec35b[m
+Author: Caye110905 <145046977+Caye110905@users.noreply.github.com>
+Date:   Fri Jan 17 17:37:10 2025 +0100
+
+    Input de correo hecho
+
+[33mcommit 063c3b2997bcffe161a85c42f5c2a6b8ab4f4837[m
+Merge: 1b1d694 e7c4516
+Author: Adrian Escolar <144839808+adriesco@users.noreply.github.com>
+Date:   Fri Jan 17 17:28:15 2025 +0100
+
+    Merge pull request #7 from Emanuel-Hosu/Escolar-C9
+    
+    Escolar c9
+
+[33mcommit e7c4516e3d847825f087b601ff09a8b5f16f3277[m
+Author: adriesco <144839808+adriesco@users.noreply.github.com>
+Date:   Fri Jan 17 17:26:33 2025 +0100
+
+    Los dos footer hechos
+
+[33mcommit 1b1d694baf3b03291cdf8ac9cad1f8925b534cd0[m
+Merge: 757345a aa6c606
+Author: ZMiK0_ <162772050+ZMiK0@users.noreply.github.com>
+Date:   Fri Jan 17 17:06:40 2025 +0100
+
+    Merge pull request #6 from Emanuel-Hosu/belzFix2
+    
+    fix
+
+[33mcommit aa6c606ba3d0da312e2c6398d1b2b2cfbb784d96[m
+Author: ZMiK0 <kbelz21z@gmail.com>
+Date:   Fri Jan 17 17:06:09 2025 +0100
+
+    fix
+
+[33mcommit 757345a436fe079bc3fde59d900248f74b843f99[m
+Merge: 1815973 8f5ab71
+Author: ZMiK0_ <162772050+ZMiK0@users.noreply.github.com>
+Date:   Fri Jan 17 16:56:45 2025 +0100
+
+    Merge pull request #5 from Emanuel-Hosu/belz-C25
+    
+    Cuando haces curl a la API con los parametros adecuados se crea el usuario correctamente
+
+[33mcommit 8f5ab719b6521b0fec4c8e483cf58c2e1595b31c[m
+Author: ZMiK0 <kbelz21z@gmail.com>
+Date:   Fri Jan 17 16:55:58 2025 +0100
+
+    Cuando haces curl a la API con los parametros adecuados se crea el usuario correctamente
+
+[33mcommit 1815973b241d58c1814c8ecc77c380b034cad903[m
+Merge: d851a1c 8280e7e
+Author: ZMiK0_ <162772050+ZMiK0@users.noreply.github.com>
+Date:   Fri Jan 17 16:25:59 2025 +0100
+
+    Merge pull request #4 from Emanuel-Hosu/belz-fix23
+    
+    backendFix
+
+[33mcommit 8280e7e835da3a6ab2795d447039e2d8b98b9c67[m
+Author: ZMiK0 <kbelz21z@gmail.com>
+Date:   Fri Jan 17 16:25:09 2025 +0100
+
+    backendFix
+
+[33mcommit d851a1cc71efb7ae3a8dfcf62f743b865fd8a339[m
+Merge: 78ae0bd 1d520fc
+Author: Oscar Nzabarinda Mukeshimana <101839576+MainKataVerde@users.noreply.github.com>
+Date:   Fri Jan 17 16:10:25 2025 +0100
+
+    Merge branch 'testing' of https://github.com/Emanuel-Hosu/Pocket-Mee into testing
+
+[33mcommit 38f0f0f29121dc8ff92406e77b4c03523e725b0c[m
+Author: david <davidespeton@gmail.com>
+Date:   Thu Jan 16 20:16:08 2025 +0100
+
+    finalización del footer principal
+
+[33mcommit 78ae0bd128df7a31730a523e9d8321b93fec1722[m
+Author: Oscar Nzabarinda Mukeshimana <101839576+MainKataVerde@users.noreply.github.com>
+Date:   Thu Jan 16 20:10:29 2025 +0100
+
+    tarea c23 terminada , añadimos metodo por si alguno de los userid ya existe generar uno nuevo
+
+[33mcommit 85b75bd60bbde019ffcb9c4fe04429039709cc22[m
+Author: Oscar Nzabarinda Mukeshimana <101839576+MainKataVerde@users.noreply.github.com>
+Date:   Thu Jan 16 19:54:20 2025 +0100
+
+    tarea c23 terminada , problemas en la instalacion de paquetes y el ignore
+
+[33mcommit 4f46ad09a45bcfe6a76ff3b795b107c73aae1bf3[m
+Author: Oscar Nzabarinda Mukeshimana <101839576+MainKataVerde@users.noreply.github.com>
+Date:   Thu Jan 16 19:47:32 2025 +0100
+
+    tarea c23 terminada , problemas en la instalacion de paquetes
+
+[33mcommit d9f666301a68e831cac9cfb546ea518c55b79f5d[m
+Author: david <davidespeton@gmail.com>
+Date:   Thu Jan 16 19:37:37 2025 +0100
+
+    ajuste al diseño de los svg y añadido sombreado
+
+[33mcommit 1d520fc7cc44cc08a0270ed503151f93734c93cc[m
+Merge: c101482 9ff4954
+Author: ZMiK0_ <162772050+ZMiK0@users.noreply.github.com>
+Date:   Thu Jan 16 19:33:49 2025 +0100
+
+    Merge pull request #3 from Emanuel-Hosu/belz-C24
+    
+    Api medio funciona
+
+[33mcommit 9ff4954606a0080e252d0b600d4d8c199f072de1[m
+Author: ZMiK0 <kbelz21z@gmail.com>
+Date:   Thu Jan 16 19:30:42 2025 +0100
+
+    Api medio funciona
+
+[33mcommit 69dbf92aad245e9bc6c254c6abe846dafd855f23[m
+Author: david <davidespeton@gmail.com>
+Date:   Wed Jan 15 20:32:49 2025 +0100
+
+    Distribución de iconos en el footer
+
+[33mcommit d77cff56548756b25fe32fce031dc882a00f041d[m
+Author: david <davidespeton@gmail.com>
+Date:   Wed Jan 15 20:13:36 2025 +0100
+
+    Inicio componente footerMain
+
+[33mcommit c101482300a6cb438a983ffd97ae52bf02bddfe2[m
+Merge: 8ac35c4 ac4590e
+Author: ZMiK0_ <162772050+ZMiK0@users.noreply.github.com>
+Date:   Wed Jan 15 20:06:14 2025 +0100
+
+    Merge pull request #2 from Emanuel-Hosu/C22-belz
+    
+    manejo de cartas terminado, creacion e inserccion
+
+[33mcommit ac4590ea79cd8693084e1cb62fd66c05f27dff3e[m
+Author: ZMiK0 <kbelz21z@gmail.com>
+Date:   Wed Jan 15 20:01:54 2025 +0100
+
+    manejo de cartas terminado, creacion e inserccion
+
+[33mcommit 71141a7f389232502d8fbde336d29366406cca95[m[33m ([m[1;31morigin/main[m[33m)[m
+Merge: f17dd4a 8ac35c4
+Author: mayrabpi <145108717+mayrabpi@users.noreply.github.com>
+Date:   Wed Jan 15 19:19:28 2025 +0100
+
+    Merge branch 'mayra'
+    tareas c6,7,8 terminadas
+
+[33mcommit 8ac35c4a7bec8bbe09f759cef5005037d0044982[m
+Author: mayrabpi <145108717+mayrabpi@users.noreply.github.com>
+Date:   Wed Jan 15 19:06:55 2025 +0100
+
+    finalizado boton inicio seción,input usuario,input contraseña
+
+[33mcommit 5a47bee8bff1b0379ab85e57c5ed7c99c47d6401[m
+Author: mayrabpi <145108717+mayrabpi@users.noreply.github.com>
+Date:   Wed Jan 15 18:54:31 2025 +0100
+
+    c6-c7-c8
+
+[33mcommit f17dd4a23e9113290d7ed59f3099627bc94636a3[m
+Merge: 854be86 cc1a71b
+Author: Emanuel Hosu <131873705+Emanuel-Hosu@users.noreply.github.com>
+Date:   Tue Jan 14 16:31:21 2025 +0100
+
+    Merge pull request #1 from Emanuel-Hosu/testing
+    
+    testing branch + repo frontpage refactor
+
+[33mcommit cc1a71b28b7fca0b305dfb0ebd1bb7ed2d926f5d[m
+Author: ZMiK0 <kbelz21z@gmail.com>
+Date:   Tue Jan 14 16:27:37 2025 +0100
+
+    testing branch + repo frontpage refactor
+
+[33mcommit 854be866817ab614badc03da6f852e771dba3d77[m
+Author: DavidDesk <davidespeton@gmail.com>
+Date:   Sun Jan 12 20:50:49 2025 +0100
+
+    Inicialización del proyecto con Vite y Tailwind
+
+[33mcommit 63dc0acc2abd81f56fe199186bc22ee9e6bc466c[m
+Author: Emanuel Hosu <131873705+Emanuel-Hosu@users.noreply.github.com>
+Date:   Fri Jan 10 17:22:30 2025 +0100
+
+    Initial commit
