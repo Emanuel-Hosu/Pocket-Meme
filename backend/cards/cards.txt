@@ -1,4 +1,30 @@
-Property In Egypt,rare
-Eye Of Rah,rare
-Chill Guy,legendary
-Mango,common
+Walter,common
+Pepe,common
+Pingu Mirando Atardecer,common
+Doge,legendary
+Gigachad,epic
+Trollface,legendary
+Elmo,rare
+Emoji Shitpost,epic
+Doge Empresario,common
+Bob Esponja Mafioso,common
+Marselo,rare
+Añañin,rare
+Lobo Solitario,rare
+Mr Increible,common
+Mr Increible Uncanny,rare
+Mr Increible Uncanny+,epic
+Jerry,common
+Pikachu Sorprendido,common
+Gato,common
+Mil Yardas,legendary
+Risitas,rare
+Guille Pera,common
+Mike Wazoski,common
+Saul Meme,rare
+The Rock,common
+Ghost,epic
+Actually,common
+Yoshi,epic
+Chill Guy,epic
+Nugget,common
