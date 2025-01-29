@@ -4,7 +4,7 @@ import {BotonMultiusosAzul } from "./BotonMultiusosAzul";
 
 export const Formulario = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-400 via-blue-300 to-blue-200">
                 <div className="bg-white/80 backdrop-blur-sm shadow-lg rounded-lg w-80 h-full p-4 flex flex-col items-center">
                     <div className="mt-4">
                     <Logo />

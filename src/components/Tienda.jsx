@@ -7,7 +7,7 @@ export const Tienda = ({ dinero}) => {
     }
 
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen">
+    <div className="flex flex-col items-center justify-center w-screen h-screen bg-white">
       <div className="bg-white backdrop-blur-sm shadow-lg rounded-lg w-96 h-full px-4 py-8 flex flex-col items-center ">
         <div className="mt-4  flex flex-row rounded-xl border- shadow-lg shadow-slate-400 border-slate-400 w-[350px] h-16">
           <p className="text-4xl text-gray-400 font-thin rounded-sm ml-6">Tienda</p>

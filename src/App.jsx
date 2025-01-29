@@ -1,17 +1,11 @@
-import React from "react";
-import { Registrarse } from "./components/Registrarse";
-import { IniciarSesion } from "./components/IniciarSesion";
-import {Logo} from './components/Logo';
-import { BotonFormulario } from "./components/BotonFormulario";
-import { Formulario } from "./components/Formulario";
-import { Tienda } from "./components/Tienda";
-
+import React from 'react';
+import Cuenta from './components/Cuenta';
 
 function App() {
   return (
-    <>
-    <Tienda dinero={10} />
-    </>
+    <div>
+      <Cuenta />
+    </div>
   );
 }
 
