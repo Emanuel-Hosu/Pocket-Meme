@@ -6,6 +6,7 @@ client = MongoClient("mongodb://localhost:27017")
 db = client.cardGame  
 
 user_database = db.get_collection("users")
+cards_database = db.get_collection("cards")
 
 
 
@@ -90,3 +91,9 @@ def addMoney (moneyNum , user_id):
 
 def change_pfp (pfp , user_id):
     user_database.update_one({"_id": user_id}, {"$set": {"pfp": pfp}})
+
+def add_to_starred(user_id,card_id):
+    user_database.update_one({"_id":user_id},{"$push": {"starred_cards": card_id}})
+
+def remove_from_starred(user_id,card_id):
+    user_database.update_one({"_id":user_id},{"$pull": {"starred_cards": card_id}})
