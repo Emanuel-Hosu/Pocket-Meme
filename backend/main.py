@@ -21,10 +21,20 @@ async def user_add(name:str, password:str, mail:str):
     return result
 
 # Probar usando `curl -X POST "http://127.0.0.1:8000/pack_opening/?user_id=VERELIDDELUSUARIOCREADOANTES"`
-@app.post("/pack_opening/")
+@app.post("/pack_opening/") #cambiar esto a futuro por la url correspondiente
 async def pack_opening(user_id:str):
     result = pm.pack_opening(user_id)
     print("Sobre abierto")
     return result
 
-# Para crear cartas usar el cm.cardmanagement()
+@app.post("/starring_card/")
+async def starred_card(user_id:str,card_id:str):
+    card = um.add_to_starred(user_id,card_id)
+    print("Añadido a favoritos")
+    return card
+
+@app.post("/removing_starred_card/")
+async def remove_starred_card(user_id:str,card_id:str):
+    card = um.remove_from_starred(user_id,card_id)
+    print("Eliminado de favoritos")
+    return card
