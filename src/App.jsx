@@ -1,14 +1,11 @@
+// filepath: /c:/Users/vict6/OneDrive/Documentos/MAYRA DAM 2/proyecto_Pocket_Meme_mayra/Pocket-Meme/src/App.jsx
 import React from "react";
-import { Registrarse } from "./components/Registrarse";
-import { IniciarSesion } from "./components/IniciarSesion";
-import {Logo} from './components/Logo';
-import { BotonFormulario } from "./components/BotonFormulario";
-import { Formulario } from "./components/Formulario";
+import Prueba from './components/Prueba';
 
 function App() {
   return (
     <>
-    <Formulario />
+      <Prueba />
     </>
   );
 }
