@@ -2,12 +2,20 @@ from pymongo import MongoClient
 import hashlib
 import random
 
+import os
+import yagmail
+from dotenv import load_dotenv
+
 client = MongoClient("mongodb://localhost:27017")
 db = client.cardGame  
 
 user_database = db.get_collection("users")
 cards_database = db.get_collection("cards")
 
+load_dotenv()
+
+EMAIL = os.getenv("EMAIL")
+PASSWORD = os.getenv("PASSWORD") #CREAR UN .env en /backend/users/.env con EMAIL=email\nPASSWORD=contraseña
 
 
 def user_creation(name , password, mail):
@@ -62,6 +70,8 @@ def user_creation(name , password, mail):
     
     if(not user_database.find_one({"mail": mail})):
         user_database.insert_one(user)
+        yag = yagmail.SMTP(EMAIL, PASSWORD)
+        yag.send(to=mail, subject="Confirmación de cuenta", contents="Su cuenta se ha creado correctamente :D !\n\n-ZMiK0_ del equipo de Pocket Meme")
     else:
         return "Mail already used"
     
@@ -97,3 +107,23 @@ def add_to_starred(user_id,card_id):
 
 def remove_from_starred(user_id,card_id):
     user_database.update_one({"_id":user_id},{"$pull": {"starred_cards": card_id}})
+
+def get_inventory(user_id:str,isStarred:bool):
+
+    if isStarred:
+        result = user_database.find_one({"_id": user_id}, {"_id": 0, "starred_cards": 1})
+    else:
+        result = user_database.find_one({"_id": user_id}, {"_id": 0, "cards": 1})
+    
+    if not result:
+        return None 
+
+    if "cards" in result and isinstance(result["cards"], list):
+        try:
+            cards_as_int = [int(card) for card in result["cards"]]
+            return cards_as_int
+        except ValueError as e:
+            print(f"Error al convertir las cartas a enteros: {e}")
+            return None
+ 
+    return []
