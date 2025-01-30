@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import {BotonMultiusosRojo} from "./BotonMultiusosRojo";
 import {BotonMultiusosAzul} from "./BotonMultiusosAzul";
+import {UserId} from "./UserId";
 
-const Cuenta = () => {
+export const Cuenta = () => {
 const [progress, setProgress] = useState(50);
     //para subir porcentage updateProgress(progress + 10)
     //funcion para subir la barra de nivel
@@ -85,7 +86,7 @@ const [progress, setProgress] = useState(50);
             <BotonMultiusosRojo textoSpan="Cerrar Sesión"/>
             </div>
 
-            
+            <UserId />
         </div>  
         </div>
   );
