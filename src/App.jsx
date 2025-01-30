@@ -4,11 +4,12 @@ import { IniciarSesion } from "./components/IniciarSesion";
 import { Logo } from './components/Logo';
 import { BotonFormulario } from "./components/BotonFormulario";
 import { Formulario } from "./components/Formulario";
+import { Inventario } from "./components/Inventario";
 
 function App() {
   return (
     <>
-      <Formulario />
+      <Inventario />
     </>
   );
 }
