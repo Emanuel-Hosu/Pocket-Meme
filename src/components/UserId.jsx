@@ -2,7 +2,7 @@
 // src/components/UserIdInput.jsx
 import React, { useState } from "react";
 
-const UserId = () => {
+export const UserId = () => {
   const [userId] = useState("jdn2uq3eas22");
 
   const handleCopy = () => {
@@ -18,12 +18,12 @@ const UserId = () => {
 
   return (
     <div className="flex flex-col items-center m-4 p-4 rounded-lg w-min">
-      <span className="mb-2 text-stone-800">Id Usuario:</span>
+      <span className="mb-2 text-sm text-stone-800">Id Usuario:</span>
       <div className="flex items-center bg-stone-50 shadow-inner px-4 py-2 border rounded-full text-stone-400">
         <span className="flex-1">{userId}</span>
         <button
           onClick={handleCopy}
-          className="hover:bg-gray-300 ml-2 p-2 rounded-md"
+          className="hover:bg-gray-300 ml-2 p-1 rounded-md"
         >
           <svg
             className="fill-stone-400"
