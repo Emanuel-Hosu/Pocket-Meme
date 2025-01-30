@@ -34,3 +34,5 @@ export const MainFooter = () => {
         </div >
     );
 };
+
+export default MainFooter

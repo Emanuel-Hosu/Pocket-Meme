@@ -41,3 +41,6 @@ def test_purge():
     Metodo para borrar toda la coleccion con el objetivo de hacer pruebas, borrar en un futuro
     '''
     cards_database.delete_many({})
+
+def get_card(card_id:int):
+    return cards_database.find_one({"_id":card_id})
