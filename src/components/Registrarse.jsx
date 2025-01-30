@@ -9,7 +9,7 @@ import { User } from 'lucide-react';
 
 export const Registrarse = () => {
     return (
-      <div className="h-screen w-screen px-10 py-20 flex items-center justify-center">
+      <div className="h-screen w-screen px-10 py-20 flex items-center justify-center bg-gradient-to-b from-blue-400 via-blue-300 to-blue-200">
       <div className=' bg-white/80 backdrop-blur-sm shadow-lg rounded-lg gap-6 flex flex-col items-center justify-center w-80 h-full max-w-3xl'>
         <img src="/logopkt.png" alt="Logo" className="w-36 h-36 mb-2" />
         <UserInput />
