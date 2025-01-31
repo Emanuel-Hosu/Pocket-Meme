@@ -1,14 +1,12 @@
 import React from "react";
 import { Registrarse } from "./components/Registrarse";
 import { IniciarSesion } from "./components/IniciarSesion";
-import { Logo } from './components/Logo';
-import { BotonFormulario } from "./components/BotonFormulario";
-import { Formulario } from "./components/Formulario";
+import { Cuenta } from "./components/Cuenta";
 
 function App() {
   return (
     <>
-      <Formulario />
+      <Cuenta />
     </>
   );
 }
