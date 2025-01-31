@@ -7,7 +7,7 @@ import { User } from 'lucide-react';
 
 export const IniciarSesion = () => {
     return (
-        <div className="flex flex-col items-center justify-between min-h-screen">
+        <div className="flex flex-col items-center justify-between min-h-screen bg-gradient-to-b from-blue-400 via-blue-300 to-blue-200">
             <div className="flex-1 flex items-center">
                 <div className="bg-white/80 backdrop-blur-sm shadow-lg rounded-lg w-80 p-8 flex flex-col items-center">
                     <div className="mb-6">
@@ -30,7 +30,7 @@ export const IniciarSesion = () => {
                         <span className="text-sm text-gray-600">
                             ¿No tienes cuenta? Empieza tu aventura{" "}
                             <a 
-                                href="./components/Registrarse" 
+                                href="/registrarse" 
                                 className="text-blue-600 hover:underline hover:text-blue-800 transition-colors"
                             >
                                 registrándote

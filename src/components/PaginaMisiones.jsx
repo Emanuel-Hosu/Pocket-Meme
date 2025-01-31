@@ -1,7 +1,5 @@
 import React from "react";
-
-import { MainFooter } from './MainFooter';
-
+import MainFooter from './MainFooter'; // Updated import statement
 
 // Array de misiones con sus propiedades: id, título, descripción y número
 const missions = [

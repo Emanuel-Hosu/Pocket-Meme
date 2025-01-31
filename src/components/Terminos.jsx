@@ -3,11 +3,11 @@ import { ArrowLeft } from "lucide-react";
 
 export const TerminosCondiciones = () => {
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen">
+    <div className="flex flex-col items-center justify-between min-h-screen bg-gradient-to-b from-blue-400 via-blue-300 to-blue-200">
       <div className="flex-1 flex items-center">
         <div className="bg-white/80 backdrop-blur-sm shadow-lg rounded-lg w-80 p-8 flex flex-col items-center">
           <a
-            href="#"
+            href="/settings"
             className="absolute top-4 left-4 flex items-center text-gray-600 hover:text-gray-900"
           >
             <ArrowLeft className="w-6 h-6" />
@@ -39,7 +39,7 @@ export const TerminosCondiciones = () => {
               <br />
               <strong>Privacidad:</strong> Recopilamos y procesamos datos
               personales según nuestra{" "}
-              <a href="#PoliticasPrivacidad" className="text-blue-500">
+              <a href="/politicas" className="text-blue-500">
                 Política de Privacidad
               </a>
               .

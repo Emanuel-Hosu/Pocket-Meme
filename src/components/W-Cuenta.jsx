@@ -38,12 +38,12 @@ const [progress, setProgress] = useState(50);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen bg-white">
+    <div className="flex flex-col items-center justify-center w-screen h-screen bg-white bg-gradient-to-b from-blue-400 via-blue-300 to-blue-200">
         <div className="bg-white backdrop-blur-sm shadow-lg rounded-lg w-96 h-full px-4 py-8 flex flex-col items-center ">
             <p className="text-4xl text-gray-400 font-thin rounded-sm ml-6">Cuenta</p>
 
-            <button className="shadow-md mt-14 rounded-full ml-4">
-                    <img className="shadow-md rounded-full size-20" src="/public/gatt.jpg" alt="" />
+                <button className="shadow-md mt-14 rounded-full ml-4">
+                        <img className="shadow-md rounded-full size-20" src="/public/gatt.jpg" alt="" />
                 </button>
 
                 <div className="my-4 pb-2 rounded-lg w-36">
@@ -82,8 +82,13 @@ const [progress, setProgress] = useState(50);
 
             {/* Aquí va lo tuyo beltran */}
             <div className=" mt-14 gap-8 flex ">
-            <BotonMultiusosAzul textoSpan="Editar Perfil"/>
-            <BotonMultiusosRojo textoSpan="Cerrar Sesión"/>
+            <a href="/perfil">
+                <BotonMultiusosAzul textoSpan="Editar Perfil"/>
+            </a>
+
+            <a href="/iniciar-sesion">
+                <BotonMultiusosRojo textoSpan="Cerrar Sesión"/>
+            </a>
             </div>
 
             <UserId />

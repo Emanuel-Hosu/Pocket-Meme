@@ -22,7 +22,7 @@ export const Registrarse = () => {
         <a className="text-sm text-center text-gray-600 ">
         Si ya tienes una cuenta{" "}
         
-        <a className="text-blue-600 hover:underline ml-1" href="./components/IniciarSesion">
+        <a className="text-blue-600 hover:underline ml-1" href="/iniciar-sesion">
           inicia sesión.{" "}
         </a>
         <br />

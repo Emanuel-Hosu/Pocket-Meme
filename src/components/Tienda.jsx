@@ -1,6 +1,7 @@
-import { MainFooter } from "./MainFooter";
+import React from 'react';
+import MainFooter from "./MainFooter"; // Updated import statement
 
-export const Tienda = ({ dinero}) => {
+const Tienda = ({ dinero }) => {
     
     function handleClick() {
         alert('La tienda está en construcción');
@@ -50,7 +51,7 @@ export const Tienda = ({ dinero}) => {
             />
         </div>
         <div className="rounded-xl border-slate-400 w-[384px] bottom-1 absolute">
-        <MainFooter/>
+          <MainFooter/>
         </div>
       </div>
     </div>

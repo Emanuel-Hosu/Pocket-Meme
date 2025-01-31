@@ -1,8 +1,8 @@
 import React from "react";
-import HeaderMain from "./components/HeaderMain.jsx";
-import MainFooter from "./components/MainFooter.jsx";
-import BotonMisiones from "./components/BotonMisiones.jsx";
-import BotonTIenda from "./components/BotonTIenda.jsx";
+import HeaderMain from "./C-HeaderMain.jsx";
+import MainFooter from "./MainFooter.jsx";
+import BotonMisiones from "./BotonMisiones.jsx";
+import BotonTienda from "./BotonTienda.jsx";
 
 export default function MainPage() {
     return (
@@ -14,9 +14,9 @@ export default function MainPage() {
 
                 <div className="flex flex-col justify-center items-center">
                     <div className="bg-stone-300 rounded-3xl w-48 h-60"></div>
-                    <div className="flex justify-between items-center gap-12 mt-12">
+                    <div className="flex justify-between items-center gap-12 mt-52">
                         <BotonMisiones />
-                        <BotonTIenda />
+                        <BotonTienda />
                     </div>
                 </div>
                 <div className="content-end">

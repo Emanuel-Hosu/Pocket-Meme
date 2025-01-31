@@ -10,7 +10,7 @@ export const Formulario = () => {
                     <Logo />
                     </div>
                     <div className="mt-8 text-center">
-                    <p>Seleciona los tipos de memes que más te gusten</p>
+                    <p>Nos interesaría saber un poquito de tus gustos, esto nos ayudaría en un futuro a mejorar la App.</p>
                     </div>
                     <div className="mt-8 flex flex-wrap gap-2 justify-center">
                     <BotonFormulario img={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKJO5K0U86UzgcRbMoa_6fpuHU9U1IhybFfg&s'} texto={"ception"}/>
@@ -25,7 +25,9 @@ export const Formulario = () => {
                     <BotonFormulario img={'https://i.pinimg.com/736x/1a/c7/03/1ac70347680ed95effcd6202d69bc4e9.jpg'} texto={"Wholesome"}/>
                     </div>
                     <div className="mt-10 mb-6">
-                    <BotonMultiusosAzul textoSpan={"Enviar"} />
+                      <a href="/main">
+                        <BotonMultiusosAzul textoSpan={"Enviar"} />
+                      </a>
                     </div>
                 </div>
             </div>
