@@ -19,14 +19,15 @@ const MainHeader = () => {
 
     return (
         <div className="flex justify-center items-center w-full">
-            <div className="flex flex-col items-center bg-stone-200 shadow-xl mx-5 rounded-3xl w-full" >
+            <div className="flex flex-col items-center shadow-gray-400 shadow-lg mx-5 rounded-3xl w-full" >
+                {/*contenedor de la imagen de usuario*/}
                 <button className="shadow-md mt-4 rounded-full">
-                    <img className="shadow-md rounded-full size-20" src="/public/gatt.jpg" alt="" />
+                    <img className="shadow-md rounded-full size-16" src="/public/gatt.jpg" alt="" />
                 </button>
 
-
-                <div className="my-4 pb-2 rounded-lg w-36">
-                    <div className="relative flex shadow-inner rounded-full h-6">
+                {/*contenedor de la barra lateral y el nivel*/}
+                <div className="mt-2 mb-4 pb-2 rounded-lg w-36">
+                    <div className="relative flex shadow-gray-400 shadow-inner rounded-full h-4">
                         <div
                             className="absolute bg-green-400 rounded-full h-full"
                             style={{ width: `${progress}%` }}

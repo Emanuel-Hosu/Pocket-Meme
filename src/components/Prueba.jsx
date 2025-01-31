@@ -43,19 +43,21 @@ const Prueba = () => {
                 </button>
             </div>
 
-            <AnimatePresence>
-                {showMenu && (
-                    <motion.div
-                        className="fixed inset-0 flex justify-center items-center bg-white bg-opacity-90"
-                        initial={{ opacity: 0, y: '100%' }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: '100%' }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
-                    >
-                        <MenuMain />
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            <div className="relative flex justify-center items-center min-h-screen">
+                <AnimatePresence>
+                    {showMenu && (
+                        <motion.div
+                            className="absolute flex justify-center items-center"
+                            initial={{ opacity: 0, x: '100%' }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: '100%' }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                        >
+                            <MenuMain />
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
         </div>
     );
 };
