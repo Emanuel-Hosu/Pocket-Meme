@@ -27,7 +27,7 @@ def card_insert(id:int,photo:str,name:str,rarity:str):
     '''
     card = {
         "_id": id,
-        "photo": f"/public/cards/{photo}.png",
+        "photo": f"/cards/{photo}.png",
         "name": name,
         "rarity": rarity
     }
@@ -44,3 +44,4 @@ def test_purge():
 
 def get_card(card_id:int):
     return cards_database.find_one({"_id":card_id})
+
