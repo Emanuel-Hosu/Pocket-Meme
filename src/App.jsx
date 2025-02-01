@@ -11,6 +11,7 @@ import PoliticasPrivacidad from "./components/Politicas";
 import Contactanos from "./components/Contactanos";
 import Cuenta from "./components/W-Cuenta";
 import CrearUsuario from "./components/W-CrearUsuario";
+import Colection from "./components/Colection";
 /**
  * Falta mantenimiento page y collection page
  */
@@ -39,6 +40,7 @@ function App() {
     <>
       <Router>
         <Routes>
+          <Route path="/colection" element={<Colection />} />
           <Route path="/iniciar-sesion" element={<IniciarSesion />} />
           <Route path="/registrarse" element={<Registrarse />} />
           <Route path="/formulario" element={<Formulario />} />

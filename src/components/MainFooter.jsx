@@ -25,7 +25,7 @@ const MainFooter = () => {
             </svg>
           </button>
         </a>
-        <a href="/collection">
+        <a href="/colection">
           <button className="hover:shadow-inner hover:shadow-stone-400 rounded-full transition ease-in-out size-11">
             <svg
               xmlns="http://www.w3.org/2000/svg"
