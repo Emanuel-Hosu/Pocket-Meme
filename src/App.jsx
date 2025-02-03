@@ -12,6 +12,7 @@ import Contactanos from "./components/Contactanos";
 import Cuenta from "./components/W-Cuenta";
 import CrearUsuario from "./components/W-CrearUsuario";
 import Colection from "./components/Colection";
+import CTiendaBuyComponent from "./components/C-TiendaBuyComponent";
 /**
  * Falta mantenimiento page y collection page
  */
@@ -35,10 +36,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
  * @returns
  */
 
-function App() {
-  return (
-    <>
-      <Router>
+/**<Router>
         <Routes>
           <Route path="/colection" element={<Colection />} />
           <Route path="/iniciar-sesion" element={<IniciarSesion />} />
@@ -54,7 +52,12 @@ function App() {
           <Route path="/politicas" element={<PoliticasPrivacidad />} />
           <Route path="/perfil" element={<CrearUsuario />} />
         </Routes>
-      </Router>
+      </Router>*/
+
+function App() {
+  return (
+    <>
+      <CTiendaBuyComponent/>
     </>
   );
 }
