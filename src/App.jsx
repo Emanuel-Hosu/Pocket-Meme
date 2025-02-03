@@ -12,6 +12,7 @@ import Contactanos from "./components/Contactanos";
 import Cuenta from "./components/W-Cuenta";
 import CrearUsuario from "./components/W-CrearUsuario";
 import Colection from "./components/Colection";
+import CLoadingBarWithLogo from "./components/C-LoadingBarWithLogo";
 /**
  * Falta mantenimiento page y collection page
  */
@@ -35,10 +36,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
  * @returns
  */
 
-function App() {
-  return (
-    <>
-      <Router>
+/**
+ * <Router>
         <Routes>
           <Route path="/colection" element={<Colection />} />
           <Route path="/iniciar-sesion" element={<IniciarSesion />} />
@@ -55,6 +54,12 @@ function App() {
           <Route path="/perfil" element={<CrearUsuario />} />
         </Routes>
       </Router>
+ * @returns 
+ */
+function App() {
+  return (
+    <>
+      <CLoadingBarWithLogo/>
     </>
   );
 }
