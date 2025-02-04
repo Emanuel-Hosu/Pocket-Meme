@@ -15,10 +15,10 @@ export default function MainPage() {
         </div>
 
         <div className="flex flex-col justify-center items-center">
-          <div >
+          <div className="-mt-10">
             <Sobre3D />
           </div>
-          <div className="my-7">
+          <div className="my-8">
             <CloadingBarWithLogo />
           </div>
 
