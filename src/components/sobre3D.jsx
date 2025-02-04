@@ -148,7 +148,11 @@ const Sobre3D = () => {
         };
     }, []);
 
-    return <div ref={mountRef} />;
+    return (
+        <div className="flex flex-col justify-center items-center bg-white rounded-3xl text-center transition-all duration-200 ease-in-out w-full">
+            <div ref={mountRef} className="w-full h-[480px]" />
+        </div>
+    );
 };
 
 export default Sobre3D;
