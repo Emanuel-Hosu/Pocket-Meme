@@ -4,7 +4,14 @@ import { ArrowLeft } from "lucide-react";
 
 export const CrearUsuario = () => {
   const [selectedIcon, setSelectedIcon] = useState("/default-icon.jpg");
-  const icons = ["/elmo.jpeg", "/loboSolitario.jpg", "/pika.jpg", "/saul.jpg"];
+  const icons = [
+    "/icon1.jpeg",
+    "/icon2.jpg",
+    "/icon3.jpeg",
+    "/icon4.jpg",
+    "/icon5.jpg",
+    "/icon6.jpg",
+  ];
 
   return (
     <div className="h-screen w-full flex items-center justify-center relative">
@@ -28,7 +35,7 @@ export const CrearUsuario = () => {
           <p className="text-sm text-gray-600">Cambia Icono</p>
         </div>
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           {icons.map((icon, index) => (
             <button
               key={index}
