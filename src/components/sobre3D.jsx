@@ -3,24 +3,23 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const Sobre3D = () => {
-    const mountRef = useRef(null); // Referencia al contenedor del canvas
-    const actionsRef = useRef([]); // Referencia para almacenar las acciones de animación
-    const isAnimatingRef = useRef(false); // Referencia para controlar el estado de la animación
-
+    const mountRef = useRef(null);
+    const actionsRef = useRef([]);
+    const isAnimatingRef = useRef(false);
+    const modelRef = useRef(null);
 
     useEffect(() => {
         // Configuración de la escena, cámara y renderizador
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(45, window.innerWidth / 400, 0.1, 1000);
-        camera.position.set(0, 0, 5); // Alejar la cámara
+        camera.position.set(0, 0, 5);
         camera.lookAt(0, 0, 0);
 
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(window.innerWidth, 525);
+        renderer.setSize(window.innerWidth, 465);
         renderer.setClearColor(0xffffff, 1);
         mountRef.current.appendChild(renderer.domElement);
-
 
         // Luces
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -45,22 +44,21 @@ const Sobre3D = () => {
             (gltf) => {
                 const model = gltf.scene;
                 scene.add(model);
-                model.position.set(0, -3.0, 0);
-
+                model.position.set(0, -3.3, 0);
                 model.scale.set(2, 1.5, 1.5);
 
-                // Verificar y corregir materiales
+                modelRef.current = model;
+
                 model.traverse((child) => {
                     if (child.isMesh) {
                         child.material.transparent = true;
                         child.material.opacity = 1;
                         child.material.color.set(0xffffff);
 
-                        // Si las texturas no se cargan automáticamente, asignarlas manualmente
                         if (!child.material.map) {
                             const textureLoader = new THREE.TextureLoader();
                             textureLoader.load('/assets/sobreEntero.png', (texture) => {
-                                texture.flipY = false; // Corregir orientación de la textura
+                                texture.flipY = false;
                                 child.material.map = texture;
                                 child.material.needsUpdate = true;
                             });
@@ -74,15 +72,14 @@ const Sobre3D = () => {
                     gltf.animations.forEach((clip) => {
                         const action = mixer.clipAction(clip);
                         action.play();
-                        action.paused = true; // Pausar la animación al inicio
-                        actionsRef.current.push(action); // Almacenar la acción en la referencia
+                        action.paused = true;
+                        actionsRef.current.push(action);
 
-                        // Configurar la animación para que se pause al finalizar
-                        action.clampWhenFinished = true; // Evita que la animación se reinicie
-                        action.loop = THREE.LoopOnce; // Reproducir la animación solo una vez
+                        action.clampWhenFinished = true;
+                        action.loop = THREE.LoopOnce;
                         action.addEventListener('finished', () => {
-                            isAnimatingRef.current = false; // Desactivar el estado de animación
-                            actionsRef.current.forEach((a) => (a.paused = true)); // Pausar todas las animaciones
+                            isAnimatingRef.current = false;
+                            actionsRef.current.forEach((a) => (a.paused = true));
                         });
                     });
                 }
@@ -112,28 +109,42 @@ const Sobre3D = () => {
         };
         window.addEventListener('resize', handleResize);
 
-        // Event listener para el clic
-        const handleClick = () => {
-            if (!isAnimatingRef.current) {
-                isAnimatingRef.current = true; // Activar la animación
-                actionsRef.current.forEach((action) => {
-                    action.paused = false; // Reanudar la animación
-                    action.time = 0; // Reiniciar la animación al principio
-                });
+        // Event listener para el clic en el modelo
+        const handleClick = (event) => {
+            if (!isAnimatingRef.current && modelRef.current) {
+                const raycaster = new THREE.Raycaster();
+                const mouse = new THREE.Vector2();
+
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(event.clientY / 465) * 2 + 1;
+
+                raycaster.setFromCamera(mouse, camera);
+
+                const intersects = raycaster.intersectObject(modelRef.current, true);
+
+                if (intersects.length > 0) {
+                    isAnimatingRef.current = true;
+                    actionsRef.current.forEach((action) => {
+                        action.paused = false;
+                        action.time = 0;
+                    });
+                }
             }
         };
-        window.addEventListener('click', handleClick);
+
+        // Agregar el event listener al renderizador
+        renderer.domElement.addEventListener('click', handleClick);
 
         // Limpieza al desmontar el componente
         return () => {
             window.removeEventListener('resize', handleResize);
-            window.removeEventListener('click', handleClick);
+            renderer.domElement.removeEventListener('click', handleClick);
             mountRef.current.removeChild(renderer.domElement);
             renderer.dispose();
         };
     }, []);
 
-    return <div ref={mountRef} />; // Contenedor para el canvas de Three.js
+    return <div ref={mountRef} />;
 };
 
 export default Sobre3D;

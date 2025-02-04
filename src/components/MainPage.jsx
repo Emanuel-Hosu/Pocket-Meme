@@ -10,7 +10,7 @@ export default function MainPage() {
   return (
     <>
       <div className="grid min-h-screen">
-        <div className="content-start">
+        <div className="z-10 content-start">
           <HeaderMain />
         </div>
 
@@ -18,7 +18,10 @@ export default function MainPage() {
           <div >
             <Sobre3D />
           </div>
-          <CloadingBarWithLogo />
+          <div className="my-7">
+            <CloadingBarWithLogo />
+          </div>
+
 
           <div className="flex justify-between items-center gap-12 mb-6">
             <BotonMisiones />
