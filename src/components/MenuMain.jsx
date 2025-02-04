@@ -10,7 +10,7 @@ const MenuMain = () => {
         <div className="flex justify-center items-center px-2 sm:px-10 py-4 sm:py-20 w-96">
             <div className='flex flex-col justify-center items-center gap-2 bg-white/80 shadow-lg backdrop-blur-sm px-4 py-6 rounded-lg w-96'>
                 <NombreUsuario name="Salchuca" photo="/profile.jpg" />
-                <div className="flex mt-6 gap-10">
+                <div className="flex gap-10 mt-6">
                     <BotonMisiones />
                     <BotonTienda />
                 </div>
