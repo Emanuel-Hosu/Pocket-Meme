@@ -45,3 +45,6 @@ def test_purge():
 def get_card(card_id:int):
     return cards_database.find_one({"_id":card_id})
 
+cards_database.delete_many({})
+
+card_creation()
