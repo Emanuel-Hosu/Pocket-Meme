@@ -19,7 +19,7 @@ const MainHeader = () => {
 
     return (
         <div className="flex justify-center items-center w-full">
-            <div className="flex flex-col items-center shadow-gray-400 shadow-md mx-5 rounded-3xl w-full" >
+            <div className="flex flex-col items-center shadow-gray-400 shadow-md mx-5 rounded-3xl w-full bg-white" >
                 {/*contenedor de la imagen de usuario*/}
                 <button className="shadow-md mt-4 rounded-full">
                     <img className="shadow-md rounded-full size-16" src="/public/gatt.jpg" alt="" />
