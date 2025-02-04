@@ -22,14 +22,16 @@ const Sobre3D = () => {
         mountRef.current.appendChild(renderer.domElement);
 
         // Luces
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1);
         scene.add(ambientLight);
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 15);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 23);
         directionalLight.position.set(5, 5, 5);
+        directionalLight.target.position.set(0, -3.3, 0);
         scene.add(directionalLight);
+        scene.add(directionalLight.target);
 
-        const pointLight = new THREE.PointLight(0xffffff, 1, 10);
+        const pointLight = new THREE.PointLight(0xffffff, 1.5, 10);
         pointLight.position.set(2, 2, 2);
         scene.add(pointLight);
 
@@ -51,14 +53,16 @@ const Sobre3D = () => {
 
                 model.traverse((child) => {
                     if (child.isMesh) {
-                        child.material.transparent = true;
+                        child.material.transparent = false;
                         child.material.opacity = 1;
-                        child.material.color.set(0xffffff);
 
-                        if (!child.material.map) {
+                        if (child.material.map) {
+                            child.material.map.colorSpace = THREE.SRGBColorSpace;
+                        } else {
                             const textureLoader = new THREE.TextureLoader();
                             textureLoader.load('/assets/sobreEntero.png', (texture) => {
                                 texture.flipY = false;
+                                texture.colorSpace = THREE.SRGBColorSpace;
                                 child.material.map = texture;
                                 child.material.needsUpdate = true;
                             });
