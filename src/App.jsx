@@ -30,7 +30,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
  * - En W-Cuenta FALTA el boton de echar para atras gg
  *
  * --- PENDIENTE ---
- * - Pagina colecciones
  * - Pagina mantenimiento
  * @returns
  */
