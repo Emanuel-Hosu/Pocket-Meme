@@ -65,7 +65,7 @@ const missions = [
 const Missions = () => {
     return (
         // Contenedor principal con altura fija de pantalla
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col bg-gradient-to-t from-blue-50 via-white to-white h-screen">
             {/* Contenedor de las tarjetas de misiones con scroll */}
             <div className="flex-1 overflow-y-auto">
                 {/* Contenedor para centrar y limitar el ancho */}
@@ -76,7 +76,7 @@ const Missions = () => {
                         {missions.map((mission) => (
                             <div
                                 key={mission.id}
-                                className="bg-stone-100 shadow-xl hover:shadow-2xl rounded-2xl transition-shadow duration-200 overflow-hidden"
+                                className="bg-stone-50 shadow-xl hover:shadow-2xl rounded-2xl transition-shadow duration-200 overflow-hidden"
                             >
                                 <div className="flex justify-between p-2">
                                     {/* Contenido de la misión */}

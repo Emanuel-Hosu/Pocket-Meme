@@ -24,8 +24,8 @@ const MainFooter = () => {
 
   return (
     <>
-      <hr className="mb-0 shadow-lg border-2 border-stone-100" />
-      <div className="flex justify-around items-center h-16 bg-white">
+      <hr className="border-2 border-stone-100 shadow-lg mb-0" />
+      <div className="relative z-10 flex justify-around items-center bg-white h-16">
         <a href="/main">
           <button className={getButtonStyles('/main')}>
             <svg
@@ -75,13 +75,16 @@ const MainFooter = () => {
       <AnimatePresence>
         {showMenu && (
           <motion.div
-            className="fixed inset-0 flex justify-center items-center"
+            className="z-0 fixed inset-0 flex justify-center items-center"
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <MenuMain />
+            <div className="relative z-10">
+              <MenuMain />
+            </div>
+
           </motion.div>
         )}
       </AnimatePresence>
