@@ -40,26 +40,31 @@ const CLoadingBarWithLogo = () => {
   };
 
   return (
-    <div className="flex px-4 bg-gray-50">
-      <div className="w-[280px] max-w-md flex items-end relative">
-        <div className="flex-1">
-          <div className="w-full bg-gray-200 rounded-lg h-6 overflow-hidden shadow-inner">
-            <div
-              className="bg-blue-600 h-full rounded-lg transition-all duration-300 ease-out"
-              style={{ width: `${progress}%` }}
-            ></div>
+    <div className="flex items-center">
+      <div className="flex border-gray-200 rounded-lg px-2 py-2 shadow-blue-400 shadow-md bg-white">
+        <div className="w-[140px] max-w-md flex items-end relative">
+          <div className="flex-1 flex flex-col justify-center items-center">
+            <div className="w-full bg-blue-100 rounded-lg h-3 overflow-hidden shadow-inner">
+              <div
+                className="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-lg transition-all duration-300 ease-out"
+                style={{ width: `${progress}%` }}
+              ></div>
+            </div>
+            <p className="text-gray-600 font-mono text-sm tracking-wide mt-1">
+              {formatTime(timeLeft)}
+            </p>
           </div>
         </div>
-        <div className="shrink-0 flex flex-col items-center absolute -right-9 -top-5">
-          <img
-            src="/elmoReloj.png"
-            alt="Logo"
-            className="w-14 h-14 object-contain"
-          />
-          <p className="text-gray-600 font-mono text-sm tracking-wide mt-1">
-            {formatTime(timeLeft)}
-          </p>
-        </div>
+      </div>
+      <div className="ml-2 flex border-gray-200 rounded-lg px-2 py-2 shadow-blue-400 shadow-md relative
+                    before:content-[''] before:absolute before:left-[-8px] before:top-[50%] before:transform before:-translate-y-1/2
+                    before:border-t-[8px] before:border-b-[8px] before:border-r-[8px] 
+                    before:border-t-transparent before:border-b-transparent before:border-r-gray-200 bg-white">
+        <img
+          src="/elmoReloj.png"
+          alt="Logo"
+          className="w-9 h-9 object-contain"
+        />
       </div>
     </div>
   );

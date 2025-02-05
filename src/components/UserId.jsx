@@ -23,10 +23,10 @@ export const UserId = () => {
         <span className="flex-1">{userId}</span>
         <button
           onClick={handleCopy}
-          className="hover:bg-gray-300 ml-2 p-1 rounded-md"
+          className="ml-2 p-1 rounded-md"
         >
           <svg
-            className="fill-stone-400"
+            className="fill-stone-300 hover:fill-blue-400"
             xmlns="http://www.w3.org/2000/svg"
             height="24px"
             viewBox="0 -960 960 960"
