@@ -12,6 +12,7 @@ import Contactanos from "./components/Contactanos";
 import Cuenta from "./components/W-Cuenta";
 import CrearUsuario from "./components/W-CrearUsuario";
 import Colection from "./components/Colection";
+import { UserProvider } from "./context/UserContext"; 
 /**
  * Falta mantenimiento page y collection page
  */
@@ -36,7 +37,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <UserProvider>
       <Router>
         <Routes>
           <Route path="/colection" element={<Colection />} />
@@ -54,7 +55,7 @@ function App() {
           <Route path="/perfil" element={<CrearUsuario />} />
         </Routes>
       </Router>
-    </>
+    </UserProvider>
   );
 }
 
