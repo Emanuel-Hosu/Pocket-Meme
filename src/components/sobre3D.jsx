@@ -1,12 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import './Sobre3D.css';
 
 const Sobre3D = () => {
   const mountRef = useRef(null);
   const actionsRef = useRef([]);
   const isAnimatingRef = useRef(false);
   const modelRef = useRef(null);
+  const [showLetter, setShowLetter] = useState(false);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [isSliding, setIsSliding] = useState(false);
+
+  const cards = [
+    "/public/cards/c1.png",
+    "/public/cards/c2.png",
+    "/public/cards/c3.png"
+  ];
 
   useEffect(() => {
     // Configuración de la escena, cámara y renderizador
@@ -137,6 +147,8 @@ const Sobre3D = () => {
             action.paused = false;
             action.time = 0;
           });
+
+          setTimeout(() => setShowLetter(true), 500);
         }
       }
     };
@@ -153,9 +165,51 @@ const Sobre3D = () => {
     };
   }, []);
 
+  const handleCardClick = () => {
+    if (isSliding) return; // Evita clics múltiples mientras se desliza
+
+    setIsSliding(true);
+
+    setTimeout(() => {
+      if (currentCardIndex < cards.length - 1) {
+        setCurrentCardIndex(currentCardIndex + 1);
+      } else {
+        setShowLetter(false);
+      }
+
+      setIsSliding(false);
+    }, 300); // Reducimos el tiempo de espera para adelantar la próxima carta
+  };
+
   return (
-    <div className="flex flex-col justify-center items-center bg-white rounded-3xl text-center transition-all duration-200 ease-in-out w-full">
-      <div ref={mountRef} className="w-full h-[480px]" />
+    <div className="container">
+      <div ref={mountRef} />
+
+      {showLetter && (
+        <div className="letter-container">
+          <div className="letter">
+            <div className="letter-content">
+              {cards.map((card, index) => (
+                <img
+                  key={index}
+                  src={card}
+                  alt={`Carta ${index + 1}`}
+                  onClick={handleCardClick}
+                  className={
+                    index === currentCardIndex
+                      ? (isSliding ? "sliding" : "active")
+                      : "hidden"
+                  }
+                  style={{
+                    transition: 'transform 0.5s ease-out, opacity 0.5s ease-out',
+                    zIndex: index === currentCardIndex ? 1 : 0
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

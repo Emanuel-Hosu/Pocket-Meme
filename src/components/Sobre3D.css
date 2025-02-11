@@ -1,0 +1,83 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 465px;
+    overflow: hidden;
+}
+
+/* Contenedor del sobre 3D */
+.canvas-wrapper {
+    position: relative;
+    z-index: 3; /* El sobre empieza por encima */
+    background: transparent;
+}
+
+.letter-container {
+    position: absolute;
+    top: 110%; /* Inicia debajo del sobre */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Detrás del sobre al inicio */
+    perspective: 1000px;
+    width: 250px;
+    height: 375px;
+}
+
+.letter {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transform: translateZ(-100px) rotateX(30deg); /* Perspectiva inicial */
+    opacity: 0;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    
+    /* Animación con 5s de delay */
+    animation: letterAnimation 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+}
+
+/* Oculta la siguiente carta, pero la mantiene lista */
+.letter-content img.hidden {
+    opacity: 0;
+}
+
+/* Animación de aparición de la carta */
+@keyframes letterAnimation {
+    0% {
+        opacity: 0;
+        transform: translateZ(-10px) translateY(-350px);
+        z-index: 0;
+    }
+    40% {
+        opacity: 1;
+        transform: translateZ(50px) translateY(-565px);
+        z-index: 0;
+    }
+    70% {
+        transform: translateZ(80px) translateY(-565px);
+        z-index: 2;
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0) translateY(-450px);
+        z-index: 2;
+    }
+}
+
+/* Animación de deslizamiento al hacer clic */
+@keyframes slide-out-right {
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Aplicamos la animación de deslizamiento */
+.letter-content img {
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.letter-content img.sliding {
+    animation: slide-out-right 0.5s forwards;
+}
