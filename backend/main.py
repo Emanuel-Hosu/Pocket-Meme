@@ -1,9 +1,12 @@
-from fastapi import FastAPI
+from datetime import timedelta
+from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import OAuth2PasswordRequestForm
 from pymongo import MongoClient
 from backend.cards import card_management as cm
 from backend.cards import pack_management as pm
 from backend.users import user_management as um
+from jose import JWTError, jwt
 
 client = MongoClient("mongodb://localhost:27017")
 db = client.cardGame  
@@ -29,8 +32,20 @@ async def user_add(name:str, password:str, mail:str):
     print("USUARIO CREADO----_AAAAA_")
     return result
 
+@app.post("/api/login/")
+async def login(mail:str, password:str):
+    if um.check_auth(mail, password):
+        id = um.get_id(mail)
+        return {"message": "Login correcto", "user_id": id}
+    else:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Mail o contraseña incorrectos"
+        )
+    
+
 # Probar usando `curl -X POST "http://127.0.0.1:8000/pack_opening/?user_id=VERELIDDELUSUARIOCREADOANTES"`
-@app.post("/api/pack_opening/") #cambiar esto a futuro por la url correspondiente
+@app.post("/api/pack_opening/") 
 async def pack_opening(user_id:str):
     result = pm.pack_opening(user_id)
     print("Sobre abierto")
