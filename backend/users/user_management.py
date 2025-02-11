@@ -127,3 +127,24 @@ def get_inventory(user_id:str,isStarred:bool):
             return None
  
     return []
+
+def check_auth(mail:str, password:str):
+    hash_object = hashlib.sha256()
+    hash_object.update(password.encode())
+    hash_password = hash_object.hexdigest()
+
+    user = user_database.find_one({"mail":mail})
+    if user is None:
+        return False
+    
+    if hash_password == user["password"]:
+        return True
+    else:
+        return False
+    
+    
+def get_id(mail:str):
+    user = user_database.find_one({"mail": mail})
+    user_id = str(user["_id"]) 
+
+    return user_id
